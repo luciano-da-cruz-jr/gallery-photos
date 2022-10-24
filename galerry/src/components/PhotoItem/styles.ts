@@ -8,7 +8,7 @@ export const Container = styled.div`
     img {
         max-width: 100%;
         display: block;
-        margin-botom: 10px;
+        margin-bottom: 10px;
         border-radius: 10px;
     }
 `;
