@@ -1,4 +1,4 @@
-import { getDownloadURL, listAll, ref, uploadBytes } from "firebase/storage";
+import { getDownloadURL, listAll, ref, uploadBytes, deleteObject  } from "firebase/storage";
 import { storage } from "../libs/firebase";
 import { Photo } from "../types/Photo"
 import { v4 as createId } from 'uuid';
@@ -35,5 +35,21 @@ export const insert = async (file: File) => {
     }else {
         return new Error('Tipo de arquivo não permitido.');
     }
+    
+}
+
+export const del = async (url:string) => {
+    
+    
+    // Create a reference to the file to delete
+    const desertRef = ref(storage, `${url}`);
+
+    // Delete the file
+    deleteObject(desertRef).then(() => {
+        alert('Imagem deletada com sucesso!');
+        
+    }).catch((error) => {
+        alert('Erro ao excluir a imagem!');
+    });
     
 }

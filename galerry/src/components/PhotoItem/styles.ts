@@ -11,4 +11,19 @@ export const Container = styled.div`
         margin-bottom: 10px;
         border-radius: 10px;]
     }
+
+    button{
+            background-color: #FF4040;
+            border: 0;
+            color: #FFF;
+            padding: 8px 16px;
+            font-size: 15px;
+            border-radius: 10px;
+            margin: 0 20px;
+            cursor: pointer;
+    
+            &:hover {
+                opacity: .9;
+            }
+    }
 `;
