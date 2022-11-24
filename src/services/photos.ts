@@ -47,9 +47,10 @@ export const del = async (url:string) => {
     // Delete the file
     deleteObject(desertRef).then(() => {
         alert('Imagem deletada com sucesso!');
-        
+        return true;
     }).catch((error) => {
         alert('Erro ao excluir a imagem!');
+        return false;
     });
     
 }

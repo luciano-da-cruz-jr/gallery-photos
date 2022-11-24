@@ -5,15 +5,14 @@ import * as C from './styles';
 type Props = {
     url: string;
     name: string;
+    handleDelete: (url: string) => void
 }
 
+export const PhotoItem = ({ url, name, handleDelete }: Props) => {
 
-
-export const PhotoItem = ({ url, name }: Props) => {
-
-    const handleDelete = () => {
-        return del(url);
-    }
+    //const handleDelete = () => {
+      //  return del(url);
+    //}
 
     return (
         <C.Container>
